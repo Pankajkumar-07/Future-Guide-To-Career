@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Topic - Computer Engineering</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        // Smooth scrolling for internal links
+        document.addEventListener("DOMContentLoaded", function() {
+            const links = document.querySelectorAll('a[href^="#"]');
+            for (const link of links) {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            }
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Future Guide to Career Topics</h1>
+    </header>
+    <div class="banner">
+        <h2>Explore the World of Computer Engineering</h2>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="computer-engineering.html">Subtopics</a></li>
+            <li><a href="computer-programming.html">Courses</a></li>
+            <li><a href="cyber-security.html">Related Lessons</a></li>
+            <li><a href="data-science.html">Overview</a></li>
+        </ul>
+    </nav>
+    <section class="subtopics-grid">
+        <h3>Subtopics</h3>
+        <div class="card">Subtopic 1</div>
+        <div class="card">Subtopic 2</div>
+        <div class="card">Subtopic 3</div>
+    </section>
+    <section class="courses-grid">
+        <h3>Courses</h3>
+        <div class="course-card">Course 1</div>
+        <div class="course-card">Course 2</div>
+        <div class="course-card">Course 3</div>
+    </section>
+    <section class="lessons-grid">
+        <h3>Related Lessons</h3>
+        <div class="lesson-card">Lesson 1</div>
+        <div class="lesson-card">Lesson 2</div>
+        <div class="lesson-card">Lesson 3</div>
+    </section>
+</body>
+</html>
