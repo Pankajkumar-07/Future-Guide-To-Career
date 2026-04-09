@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Future Guide To Career - Study</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark">
+
+    <header class="topbar">
+        <div class="left-area">
+  <div class="logo-circle" title="Logo">
+    <img src="career_img/logo3.png" alt="Future Guide Logo" class="logo-img">
+  </div>
+  <div>
+                <div class="title">Future Guide To Career</div>
+                <div style="font-size:12px;color:var(--muted)">· Plan · Learn · Grow</div>
+            </div>
+        </div>
+
+        <nav class="center-area" aria-label="Main navigation">
+            <button class="nav-btn" onclick="location.href='index.html'">Home</button>
+            <button class="nav-btn" onclick="location.href='study.html'">Study</button>
+            <button class="nav-btn" onclick="location.href='jobs.html'">Jobs</button>
+            <button class="nav-btn" onclick="location.href='sports.html'">Sports</button>
+            <button class="nav-btn" onclick="location.href='culture.html'">Culture</button>
+            <button class="nav-btn" onclick="location.href='other.html'">Other Activity</button>
+        </nav>
+
+        <div class="right-area">
+            <button class="small-btn" onclick="openModal('loginModal')">Login</button>
+            <button class="small-btn" onclick="openModal('registerModal')">Register</button>
+            <button id="darkToggle" class="small-btn" aria-pressed="false">Dark</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="card" style="width:100%; max-width:1255px; min-height:1000px; margin: 18px auto;">
+        <div class="main-diagram-container">
+            <img src="career_img/img1.3.png" alt="Career Center Diagram" class="Career-diagram-img">
+        </div>
+        <div class="slider">
+             <p><h3>User:- Guest</h3></p>
+            <h2> <center>STUDY OPTION MATERIALS</center></h2>
+                  <p>This is the content section for study resources.</p>
+
+              <div class="study-nav-container">
+    <h2 style="margin-top: 0; margin-bottom: 20px;">1. Study Resources (Topics)</h2>
+    
+    <ul class="main-subject-menu">
+        
+        <li class="menu-item-with-dropdown">
+            <a href="#" class="menu-header">Subjects ▼</a>
+            
+            <ul class="dropdown-content">
+                
+                <li><a href="#">Art</a></li>
+                <li><a href="#">Business</a></li>
+                
+                <li class="menu-item-with-dropdown sub-level">
+                    <a href="#" class="menu-header sub-trigger">Computer Science ►</a>
+                    
+                    <ul class="dropdown-content sub-menu-3">
+                        <li><a href="Computer Engineering.html">Computer Engineering</a></li>
+                        <li><a href="Computer Programming.html">Computer Programming</a></li>
+                        <li><a href="Cyber Security.html">Cybersecurity</a></li>
+                        <li><a href="Data science.html">Data Science</a></li>
+                        <li><a href="software.html">Software</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#">Education & Teaching</a></li>
+                <li><a href="#">English</a></li>
+                <li><a href="#">History</a></li>
+                <li><a href="#">Math</a></li>
+                <li><a href="#">Science</a></li>
+                </ul>
+        </li>
+
+        <li class="menu-item-with-dropdown"><a href="#" class="menu-header">Teachers ▼</a></li>
+        
+        <li class="menu-item-with-dropdown"><a href="#" class="menu-header">Certifications ▼</a></li>
+        
+        <li class="menu-item-with-dropdown"><a href="#" class="menu-header">College Degrees ▼</a></li>
+        
+    </ul>
+    
+    <div style="margin-top: 30px; padding: 20px; border: 1px dashed var(--muted); border-radius: 8px;">
+        <p>Computer Engineering ke bare me batayega bad me answer</p>
+    </div>
+
+</div>
+        
+        </div>
+
+            </div>                
+
+    </main>
+    
+    <div id="modalWrapper" style="position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0, 0, 0, 0.4);z-index:20000">
+        <div id="modalContent" style="background:var(--card);padding:18px;border-radius:12px;min-width:320px;max-width:420px;box-shadow:0 10px 40px rgba(0, 0, 0, 0.1)"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
