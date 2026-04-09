@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Future Guide To Career - Jobs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark">
+
+    <header class="topbar">
+        <div class="left-area">
+  <div class="logo-circle" title="Logo">
+    <img src="career_img/logo3.png" alt="Future Guide Logo" class="logo-img">
+  </div>
+  <div>
+                <div class="title">Future Guide To Career</div>
+                <div style="font-size:12px;color:var(--muted)">· Plan · Learn · Grow</div>
+            </div>
+        </div>
+
+        <nav class="center-area" aria-label="Main navigation">
+            <button class="nav-btn" onclick="location.href='index.html'">Home</button>
+            <button class="nav-btn" onclick="location.href='study.html'">Study</button>
+            <button class="nav-btn" onclick="location.href='jobs.html'">Jobs</button>
+            <button class="nav-btn" onclick="location.href='sports.html'">Sports</button>
+            <button class="nav-btn" onclick="location.href='culture.html'">Culture</button>
+            <button class="nav-btn" onclick="location.href='other.html'">Other Activity</button>
+        </nav>
+
+        <div class="right-area">
+            <button class="small-btn" onclick="openModal('loginModal')">Login</button>
+            <button class="small-btn" onclick="openModal('registerModal')">Register</button>
+            <button id="darkToggle" class="small-btn" aria-pressed="false">Dark</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="card" style="width:100%; max-width:1255px; min-height:1000px; margin: 18px auto;">
+        <div class="main-diagram-container">
+            <img src="career_img/img1.4.png" alt="Career Center Diagram" class="Career-diagram-img">
+        </div>
+        <div class="slider">
+             <p><h3>User:- Guest</h3></p>
+            <h2> <center>Jobs Requirement </center></h2>
+                  <p>This is the content section for Jobs resources.</p>
+            </div>          
+    </main>
+    
+    <div id="modalWrapper" style="position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0, 0, 0, 0.4);z-index:20000">
+        <div id="modalContent" style="background:var(--card);padding:18px;border-radius:12px;min-width:320px;max-width:420px;box-shadow:0 10px 40px rgba(0, 0, 0, 0.1)"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
