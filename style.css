@@ -1,0 +1,421 @@
+/* style.css */
+
+:root{
+    --bg:#f7f7fb; --card:#ffffff; --text:#1a1a1a; --muted:#666;
+}
+body.dark{ --bg:#0f1724; --card:#0b1220; --text:#e6eef8; --muted:#9fb0c8 }
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.3}
+
+/* Fixed top header */
+.topbar{
+    position:fixed;top:0;left:0;right:0;height:72px;background:var(--card);display:flex;align-items:center;justify-content:space-between;padding:0 18px;border-bottom:1px solid rgba(0,0,0,0.06);z-index:9999;box-shadow:0 2px 10px rgba(0,0,0,0.03)
+}
+
+.left-area{display:flex;align-items:center;gap:14px}
+.logo-circle{width:46px;height:46px;border-radius:50%;
+    background: var(--card); /* white and border */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* white ke andar hai */
+  border: 1px solid rgba(0,0,0,0.1); /* boarder ke liye hai */
+}
+.logo-img {
+  width: 100%; /* लोगो सर्कल की पूरी चौड़ाई लें */
+  height: 100%; /* लोगो सर्कल की पूरी ऊँचाई लें */
+  object-fit: cover; /* इमेज को सही अनुपात में फ़िट करने के लिए */
+}
+.title{font-weight:700;font-size:18px}
+
+.center-area{display:flex;align-items:center;gap:12px}
+.nav-btn{background:transparent;border:1px solid rgba(0,0,0,0.08);padding:10px 16px;border-radius:10px;cursor:pointer;font-weight:600;color:var(--text);transition:background 0.2s}
+.nav-btn:hover{background:rgba(0,0,0,0.05)}
+.nav-btn:active{transform:translateY(1px)}
+
+.right-area{display:flex;align-items:center;gap:12px}
+.small-btn{padding:8px 12px;border-radius:8px;border:1px solid rgba(0,0,0,0.08);background:transparent;cursor:pointer;color:var(--text);transition:background 0.2s}
+.small-btn:hover{background:rgba(0,0,0,0.05)}
+
+/* Page body content */
+main{padding:50px 10px 20px;max-width:1400px;margin:0 auto}
+
+.card { 
+    background: var(--card); 
+    padding: 18px; 
+    border-radius: 12px; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.main-diagram-container {
+    width: 100%;
+    /* कार्ड में थोड़ी पैडिंग (padding) के लिए मार्जिन एडजस्ट करें */
+    margin-bottom: 25px; 
+    text-align: center; /* सुनिश्चित करता है कि यदि इमेज छोटी हो तो वह सेंटर में रहे */
+}
+.career-diagram-img {
+    width: 100%; /* कार्ड की पूरी चौड़ाई लें */
+    /* इमेज की ऊंचाई को उसके अनुपात (aspect ratio) के अनुसार ऑटोमैटिकली एडजस्ट करें */
+    height: auto; 
+    max-height: 500px; /* यदि इमेज बहुत लंबी है, तो उसे सीमित करें (आप अपनी ज़रूरत के अनुसार बदल सकते हैं) */
+    display: block;
+    border-radius: 8px; /* यदि आप इमेज के कोनों को थोड़ा गोल (rounded) करना चाहते हैं */
+}
+
+
+/* Image Slider Styles (Updated for 6 Slides and 500px Height) */
+.slider {
+    width: 100%;
+    /* ✅ 500px Height सेट किया गया (आप इसे अपनी इच्छानुसार बदल सकते हैं) */
+    height: 500px; 
+    overflow: hidden;
+    border-radius: 12px;
+    position: relative;
+    margin-top: 0px;
+}
+
+.slides {
+    display: flex;
+    /* 6 इमेजेज के लिए 600% */
+    width: 600%; 
+    /* ✅ Height को स्लाइडर के बराबर 500px सेट किया गया */
+    height: 500px;
+    transition: margin-left 0.7s ease-in-out;
+}
+
+.slides img {
+    /* 6 इमेजेज के लिए 1/6वाँ भाग */
+    width: 16.6666%; 
+    /* ✅ Height को स्लाइडर के बराबर 500px सेट किया गया */
+    height: 500px;
+    /* object-fit: cover यह सुनिश्चित करता है कि इमेज 500px की ऊँचाई को कवर करे */
+    object-fit: cover;
+}
+
+/* Dots */
+.dots {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background: #ffffff77;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.dot.active {
+    background: #fff;
+    transform: scale(1.3);
+}
+
+/* Modal form adjustments for dark mode readability */
+#modalWrapper input, #modalWrapper button {
+    border: 1px solid var(--muted) !important;
+    background: var(--bg) !important;
+    color: var(--text) !important;
+}
+
+/* Responsive */
+@media (max-width:760px){
+    .center-area{display:none}
+    .title{display:none}
+}
+
+button:focus{outline:3px solid rgba(59,130,246,0.15)}
+
+
+       /* Start Search Stlye */
+
+/* Search Form Styling */
+.search-form {
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    background: var(--bg); /* Use background variable for better dark mode support */
+    transition: box-shadow 0.2s;
+    height: 40px; /* Match height of nav-btn */
+}
+
+.dark .search-form {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.search-form:focus-within {
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+    border-color: transparent;
+}
+
+.search-input {
+    border: none;
+    padding: 0 12px;
+    background: transparent;
+    color: var(--text);
+    height: 100%;
+    flex-grow: 1;
+    min-width: 180px; /* Ensure input has enough space */
+}
+
+.search-input:focus {
+    outline: none;
+}
+
+/* Search Button inside the form */
+.search-btn {
+    background: transparent;
+    border: none;
+    padding: 0 12px;
+    height: 100%;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Responsive adjustment for small screens */
+@media (max-width: 900px) {
+    /* On medium screens, the search bar can take up less space */
+    .search-input {
+        min-width: 100px;
+    }
+}
+@media (max-width: 760px) {
+    /* Since center-area is hidden on small screens, the search form needs to be moved */
+    .center-area {
+        display: none; /* Already defined */
+    }
+    /* You would typically move the search bar to the right-area or under the logo for mobile */
+}
+
+/* study card */
+.main-diagram-container {
+    width: 100%;
+    /* कार्ड में थोड़ी पैडिंग (padding) के लिए मार्जिन एडजस्ट करें */
+    margin-bottom: 25px; 
+    text-align: center; /* सुनिश्चित करता है कि यदि इमेज छोटी हो तो वह सेंटर में रहे */
+}
+.Career-diagram-img {
+    width: 100%; /* कार्ड की पूरी चौड़ाई लें */
+    /* इमेज की ऊंचाई को उसके अनुपात (aspect ratio) के अनुसार ऑटोमैटिकली एडजस्ट करें */
+    height: auto; 
+    max-height: 500px; /* यदि इमेज बहुत लंबी है, तो उसे सीमित करें (आप अपनी ज़रूरत के अनुसार बदल सकते हैं) */
+    display: block;
+    border-radius: 8px; /* यदि आप इमेज के कोनों को थोड़ा गोल (rounded) करना चाहते हैं */
+}
+
+
+/* --- Multi-Level Dropdown Menu Styling (For study.php) --- */
+
+.study-nav-container {
+    padding: 10px 0;
+}
+
+.main-subject-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* सभी मुख्य ड्रॉपडाउन को एक लाइन में रखें */
+    gap: 15px; /* मुख्य मेनू आइटम्स के बीच गैप */
+    border-bottom: 2px solid rgba(102, 102, 102, 0.2);
+    padding-bottom: 10px;
+    flex-wrap: wrap; /* छोटे स्क्रीन के लिए */
+}
+
+.menu-item-with-dropdown {
+    position: relative; /* सब-मेनू को पोजीशन करने के लिए */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-header {
+    display: block;
+    padding: 8px 12px;
+    background: var(--bg); 
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 5px;
+    border: 1px solid rgba(0,0,0,0.1);
+    transition: background 0.2s;
+}
+
+.dark .menu-header {
+    border-color: rgba(255,255,255,0.1);
+}
+
+.menu-header:hover {
+    background: #5eead4;
+    color: #1a1a1a;
+}
+
+/* --- Multi-Level Dropdown Menu Styling (For study.php) --- */
+
+.main-subject-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; 
+    gap: 10px; /* मुख्य ड्रॉपडाउन हेडर के बीच गैप */
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding-bottom: 5px;
+}
+
+.menu-item-with-dropdown {
+    position: relative;
+    list-style: none;
+}
+
+/* मेनू हेडर बटन स्टाइल */
+.menu-header {
+    display: block;
+    padding: 10px 15px;
+    background: transparent; 
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: background 0.2s;
+    border: none;
+}
+
+.menu-header:hover {
+    background: var(--bg);
+}
+
+/* ---Study  Dropdown Content (Level 2 & 3) --- */
+
+.dropdown-content {
+    display: none; /* डिफ़ॉल्ट रूप से छिपाएँ */
+    position: absolute;
+    top: 100%; /* Level 1 के नीचे */
+    left: 0;
+    min-width: 200px; /* चौड़ाई सेट करें */
+    background-color: var(--card);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    list-style: none;
+    padding: 5px 0;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.dropdown-content li {
+    position: relative;
+}
+
+.dropdown-content li a {
+    color: var(--text);
+    padding: 8px 15px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content li a:hover {
+    background-color: var(--bg);
+}
+
+/* --- Level 3 Positioning (Sub-Menu) --- */
+
+/* Sub-level item को hover करने पर उसका ड्रॉपडाउन दिखना चाहिए */
+.sub-level:hover > .sub-menu-3 {
+    display: block;
+}
+
+.sub-menu-3 {
+    /* Level 3 को Level 2 के बगल में दिखाना */
+    top: -5px; /* Level 2 item के साथ संरेखित करने के लिए */
+    left: 100%;
+    /* सुनिश्चित करें कि Level 3 का बैकग्राउंड Level 2 से अलग न हो */
+    box-shadow: 2px 0 12px rgba(0, 0, 0, 0.1); 
+}
+
+/* --- Dropdown Visibility on Hover (Level 1 to Level 2) --- */
+
+.menu-item-with-dropdown:hover > .dropdown-content {
+    display: block; /* Level 1 को hover करने पर Level 2 दिखाएँ */
+}
+
+/* computer engineering */
+/* computer_engineering.php से copy किया गया CSS */
+.page-content { padding: 0 18px; }
+
+/* Banner Styling (Explore Computer Engineering) */
+.engineering-banner {
+    background: linear-gradient(90deg, #111827 0%, #1e3a8a 100%);
+    background-image: url('career_img/engineering_banner_bg.jpg'); 
+    background-size: cover;
+    background-position: center;
+    padding: 50px 20px; 
+    color: #fff; 
+    margin: -18px -18px 0 -18px; 
+    border-radius: 12px 12px 0 0;
+}
+.engineering-banner h1 { margin-top: 0; font-size: 2.2em; }
+.engineering-banner a { color: #ccc; text-decoration: none; font-size: 0.9em; }
+
+/* Tab Navigation (Subtopics, Courses, etc.) */
+.tab-navigation { 
+    display: flex; 
+    border-bottom: 2px solid var(--bg); 
+    margin-bottom: 20px;
+    overflow-x: auto; 
+    padding: 10px 0;
+    background: var(--card); 
+}
+/* ... बाकी सभी CSS नियम यहाँ से कॉपी करें (subtopic-card, grid, lesson-grid, आदि) ... */
+
+/* social icons - instragram , youtube , facebook */
+.sci {
+    position: absolute;
+    left: 150px;
+    bottom: 130px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transform: scale(1);
+    z-index: 1000;
+    gap: 20px;
+}
+
+.sci.active {
+    transform: scale(0);
+}
+
+.sci li {
+    list-style: none;
+}
+
+.sci li a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.sci li a ion-icon {
+    font-size: 1.5em;
+    color: var(--primary);
+    transition: 0.5s;
+}
+
+.sci li a ion-icon:hover {
+    color: #8d20fa;
+}
+
+/* ho skta hai social icon*/
+    .sci {
+        position: absolute;
+        left: 35px;
+        top: 50%;
+        transform: translate(-50%);
+        display: flex;
+        flex-direction: coloum;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
